@@ -26,7 +26,7 @@
 
 .btn-primary{
     background: var(--primary);
-    color: var(--secondary);
+    color: var(--pure);
     transition: all 0.3s ease;
 }
 
