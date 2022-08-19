@@ -21,7 +21,7 @@
 }
 
 html{
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 body{
@@ -342,7 +342,7 @@ section.work .card-wrapper .card{
 }
 
 section.work .card-wrapper .card .overlay{
-    width: 100%;
+    width: 50%;
     height: 0;
     position: absolute;
     left: 0;
@@ -353,19 +353,79 @@ section.work .card-wrapper .card .overlay{
     align-items: center;
     flex-direction: column;
     color: var(--light);
-    border-radius: 15px;
-    transition: height .8s;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    transition: height .8s,display .8s;  
+}
+section.work .card-wrapper .card .overlay span{
+    display: none;
+}
+section.work .card-wrapper .card .overlay i{
+    display: none;
+}
+
+section.work .card-wrapper .card .overlay a{
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+}
+section.work .card-wrapper .card:hover .overlay span{
+    display: block;
+}
+section.work .card-wrapper .card:hover .overlay i{
+    display: block;
 }
 
 section.work .card-wrapper .card:hover .overlay{
     cursor: pointer;
     height: 100%;
 }
+section.work .card-wrapper .card .overlaydown{
+    width: 50%;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),var(--primary));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--light);
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: height .5s;
+}
 
-section.work .card-wrapper .card .overlay a{
-    color: var(--secondary);
+section.work .card-wrapper .card .overlaydown a{
+    display: none;
+    color: #FFFFFF;
+    text-align: center;
     text-decoration: none;
 }
+section.work .card-wrapper .card .overlaydown i{
+    display: none;
+}
+section.work .card-wrapper .card:hover .overlaydown a{
+    display: block;
+}
+section.work .card-wrapper .card:hover .overlaydown i{
+    display: block;
+}
+
+section.work .card-wrapper .card:hover .overlaydown{
+    cursor: pointer;
+    height: 100%;
+    
+}
+
+section.work .card-wrapper .card .overlay,.overlaydown a{
+    color: var(--pure);
+    text-decoration: none;
+    
+}
+
+
 
 section.work .card-wrapper .card img{
     height: 100%;
@@ -373,6 +433,8 @@ section.work .card-wrapper .card img{
     border-radius: 15px;
     
 }
+
+/* ---------------------------------------BLOG---------------------------------------------- */
 
 section.blog{
     background: var(--dark);
@@ -648,10 +710,6 @@ footer .copyright{
 
 
 @media (max-width: 576px){
-
-    header{
-        clip-path: polygon(0 0,100% 0, 100% 100%, 75% 97%, 0 100%);
-    }
 
     .hero{
         flex-direction: column;
